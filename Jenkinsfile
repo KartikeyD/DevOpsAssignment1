@@ -8,12 +8,12 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'npm install'
+                sh 'javac -d . src/*.java'
             }
         }
         stage('Test') {
             steps {
-                sh 'npm test'
+                sh 'java -cp . Main'
             }
         }
     }
