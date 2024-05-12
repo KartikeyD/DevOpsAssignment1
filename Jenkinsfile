@@ -11,7 +11,7 @@ pipeline {
             steps {
                 script {
                     try {
-                        sh 'mvn clean package'
+                        bat 'mvn clean package'
                     } catch (Exception e) {
                         currentBuild.result = 'FAILURE'
                         throw e
@@ -23,7 +23,7 @@ pipeline {
             steps {
                 script {
                     try {
-                        sh 'mvn test'
+                        bat 'mvn test'
                     } catch (Exception e) {
                         currentBuild.result = 'FAILURE'
                         throw e
