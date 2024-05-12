@@ -1,10 +1,11 @@
 pipeline {
     agent any
+    
     stages {
-        stage('Checkout') {
+        stage('Test Shell Command') {
             steps {
-                sh 'echo Hello Jenkins
-             }
+                sh 'echo Hello Jenkins'
+            }
         }
     }
 }
