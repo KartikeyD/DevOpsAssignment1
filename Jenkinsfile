@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/KartikeyD/DevOpsAssignment1.git'
+                checkout([$class: 'GitSCM', branches: [[name: 'main']], userRemoteConfigs: [[url: 'https://github.com/KartikeyD/DevOpsAssignment1.git']]])
             }
         }
         stage('Build') {
